@@ -1,0 +1,195 @@
+@media screen and (max-width: 568px) {
+    body {
+        font-size: calc((16 / 568) * 100vw); 
+    }
+    
+    .cover .cover-inner .cover-logo img {
+        width: calc((50 / 568) * 100vw); 
+    }
+
+    .cover .cover-inner .couple-img img {
+        max-width: calc((320 / 568) * 100vw) 
+    }
+
+    .cover .cover-inner .cover-heart {
+        max-width: calc((312 / 568) * 100vw) 
+    }
+
+    .cover .cover-inner .cover-text-1 {
+        font-size: calc((12 / 568) * 100vw); 
+        letter-spacing: 1px;
+    }
+
+    .cover .cover-inner .cover-text-2 {
+        font-size: calc((12 / 568) * 100vw); 
+    }
+
+    .cover .cover-inner .cover-names {
+        font-size: calc((27 / 568) * 100vw); 
+    }
+
+    /* time */
+    .time h2 {
+         font-size: calc((35 / 568) * 100vw); 
+    }
+
+    .time .time-box p {
+        font-size: calc((32 / 568) * 100vw); 
+    }
+
+    .time .time-box .time-hour {
+        font-size: calc((15 / 568) * 100vw); 
+    }
+
+    .time .time-sub {
+        font-size: calc((8.7 / 568) * 100vw); 
+    }
+
+    .time img {
+        width: calc((25 / 568) * 100vw); 
+    }
+
+    /* location */
+    .location h2 {
+        font-size: calc((36 / 568) * 100vw); 
+    }
+
+    .location .location-name {
+        font-size: calc((24 / 568) * 100vw); 
+    }
+
+    .location .location-address {
+        font-size: calc((15 / 568) * 100vw); 
+    }
+
+    .location .btn {
+        font-size: calc((16 / 568) * 100vw); 
+        max-width: calc((328 / 568) * 100vw); 
+    }
+
+    .location .location-text {
+        font-size: calc((9.6 / 568) * 100vw); 
+        letter-spacing: calc((2.4 / 568) * 100vw); 
+    }
+
+    .location .logo img {
+        max-width: calc((30 / 568) * 100vw); 
+    }
+
+    /*========================= timeline ===========================*/
+    .timeline h2 {
+        font-size: calc((36 / 568) * 100vw); 
+    }
+
+    .timeline .timeline-item .item {
+        min-height: calc((25 / 568) * 100vw); 
+    }
+
+    .timeline .timeline-list .timeline-item .hour {
+        font-size: calc((11.3 / 568) * 100vw); 
+    }
+
+    .timeline .timeline-list .timeline-item .dot-icon-box .dot-icon {
+        width: calc((8.6 / 568) * 100vw); 
+    }
+
+    .timeline .timeline-list .timeline-item .image-icon {
+        max-width: calc((30 / 568) * 100vw); 
+    }
+
+    .timeline .timeline-list .timeline-item .image-icon img {
+        max-width: calc((22 / 568) * 100vw); 
+    }
+
+    .timeline .timeline-list .timeline-item .image-icon img.rings-icon {
+        max-width: calc((30 / 568) * 100vw); 
+    }
+
+    .timeline .timeline-list .timeline-item .title {
+        font-size: calc((10 / 568) * 100vw); 
+    }
+
+    /* ================= dresscode ======================= */
+    .dresscode .leaf-icon {
+        width: calc((25 / 568) * 100vw); 
+    }
+    .dresscode h2 { 
+        font-size: calc((36 / 568) * 100vw); 
+    }
+
+    .dresscode .dresscode-text {
+        font-size: calc((11 / 568) * 100vw); 
+        letter-spacing: calc((1.6 / 568) * 100vw); 
+    }
+
+    .dresscode .dresscode-item .image-icon {
+        max-width: calc((52 / 568) * 100vw); 
+    }
+    .dresscode .dresscode-item .icon-title {
+         font-size: calc((12 / 568) * 100vw);
+    }
+
+    /* ===================== RSVP ================================ */
+    .rsvp .box-leaf-icon img {
+        width: calc((44 / 568) * 100vw);
+    }
+    .rsvp h2 {
+        font-size: calc((32 / 568) * 100vw);
+    }
+
+    .rsvp .rsvp-text {
+        font-size: calc((10 / 568) * 100vw);
+        letter-spacing: calc((1.28 / 568) * 100vw);
+    }
+
+    .rsvp .rsvp-text strong {
+        font-size: calc((10 / 568) * 100vw);
+    }
+
+    #rsvp-form .radio-button {
+        font-size: calc((14 / 568) * 100vw);
+    }
+
+    #rsvp-form .form-group input.input-text,
+    #rsvp-form .form-group textarea.input-text {
+        font-size:  calc((11 / 568) * 100vw);
+    }
+
+    #rsvp-form .form-actions button {
+        font-size: calc((16 / 568) * 100vw);
+    }
+
+    /* ===================== extra-info ================================ */
+    .extra-info h2 {
+        font-size: calc((26 / 568) * 100vw);
+        letter-spacing: calc((2.4 / 568) * 100vw);
+    }
+
+    .extra-info p.p-1,
+    .extra-info p.p-2,
+    .extra-info p.p-3,
+    .extra-info p.p-4 {
+        font-size: calc((10 / 568) * 100vw);
+    }
+
+    .extra-info .end-title {
+        font-size: calc((32 / 568) * 100vw);
+    }
+
+    /* new handle accordion ====================> */
+    .header-cell, .content-cell {
+        font-size: calc((14 / 568) * 100vw);
+    }
+
+    .toggle-icon {
+        font-size: calc((16 / 568) * 100vw);
+    }
+
+    .header-text {
+        font-size: calc((16 / 568) * 100vw);
+        letter-spacing: calc((.5 / 568) * 100vw);
+    }
+    .content-text ul li {
+        font-size: calc((12 / 568) * 100vw);
+    }
+}

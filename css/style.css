@@ -1,0 +1,1141 @@
+/* =======================
+   1. Variables
+======================= */
+@font-face {
+    font-family: 'PinyonScript';
+    /* tên bạn muốn dùng */
+    src: url('../fonts/PinyonScript-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    /* tên bạn muốn dùng */
+    src: url('../fonts/SVN-Gotham.svg') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham Bold';
+    /* tên bạn muốn dùng */
+    src: url('../fonts/SVN-GothamBold.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'SVN-Gotham Book';
+    /* tên bạn muốn dùng */
+    src: url('../fonts/SVN-GothamBook.svg') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham Light Italic';
+    /* tên bạn muốn dùng */
+    src: url('../fonts/SVN-GothamLightItalic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gotham Light';
+    /* tên bạn muốn dùng */
+    src: url('../fonts/SVN-GothamLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy Bold';
+    /* tên bạn muốn dùng */
+    src: url('../fonts/SVN-Gilroy-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy Xlight';
+    /* tên bạn muốn dùng */
+    src: url('../fonts/SVN-Gilroy-Xlight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy Bold';
+    /* tên bạn muốn dùng */
+    src: url('../fonts/SVN-Gilroy-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* Fonts */
+    --font-main: "SVN-Gotham Light", serif;
+
+    /* Colors */
+    --color-text: #3f4122ff;
+    --color-text-secondary: #363823ff;
+    --color-button: #762222ff;
+    --color-primary: #51110fff;
+    --color-timeline: #ebdec4ff;
+    /* --color-secondary: #d2691e; */
+
+
+    /* Layout */
+    --radius: 12px;
+    --spacing: 5px;
+    --max-width: 568px;
+
+    /* Typography scale */
+    --fs-small: 14px;
+    --fs-base: 16px;
+    --fs-large: 20px;
+    --fs-title: 28px;
+
+    --logo-padding-top: 110px;
+    --logo-padding-bottom: 70px;
+}
+
+/* =======================
+     2. Reset & Base
+  ======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    /* background: var(--color-bg); */
+    color: var(--color-text);
+    font-size: var(--fs-base);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    /* padding: var(--spacing); */
+}
+
+/* =======================
+     3. Typography
+  ======================= */
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    /* margin-bottom: 0.5em; */
+}
+
+h1 {
+    font-family: var(--font-accent);
+    font-size: var(--fs-title);
+    color: var(--color-primary);
+    text-align: center;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /* bỏ dấu chấm, số thứ tự */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =======================
+     4. Layout Helpers
+  ======================= */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    background: #fff;
+    border-radius: var(--radius);
+    /* padding: calc(var(--spacing) * 2); */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cover {
+    background-image: url("../images/image754.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: auto;
+}
+
+.cover .cover-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cover .cover-inner .cover-logo {
+    padding-top: 19%;
+    padding-bottom: 8%;
+}
+
+.cover .cover-inner .couple-img img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+}
+
+.cover .cover-inner .cover-logo {}
+
+.cover .cover-inner .cover-heart {
+    max-width: 312px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 12%;
+}
+
+.cover .cover-inner .cover-heart img {
+    width: 100%;
+}
+
+.cover .cover-inner .cover-text-1 {
+    font-family: 'SVN-Gotham', sans-serif;
+    font-size: 12px;
+    /* chỉnh theo kích thước bạn muốn, hình của bạn ghi 12px */
+    font-weight: normal;
+    /* vì trong Inkscape bạn để Normal */
+    letter-spacing: 1px;
+    /* giãn cách chữ nhẹ cho sang hơn */
+    text-align: center;
+    /* căn giữa khung */
+    text-transform: uppercase;
+    /* chuyển chữ hoa như hình */
+    color: var(--color-text-secondary);
+    /* tông nâu đậm gần giống khung trái tim */
+    line-height: 1;
+}
+
+.cover .cover-inner .cover-text-2 {
+    font-family: 'SVN-Gotham Light', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    /* letter-spacing: 0.03em;  */
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    line-height: 1;
+}
+
+.cover .cover-inner .cover-names {
+    font-family: "PinyonScript", sans-serif;
+    font-size: 27px;
+    font-weight: 300;
+    color: var(--color-primary);
+    padding-top: 6%;
+    padding-bottom: 14%;
+}
+
+/* time */
+.time {
+    background-image: url("../images/g190.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    aspect-ratio: 568 / 606;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+.time h2 {
+    font-family: "PinyonScript", sans-serif;
+    font-size: 35px;
+    font-weight: normal;
+    color: var(--color-primary);
+    margin-top: 35%;
+}
+
+.time .time-box {
+    margin-top: 5%;
+}
+
+.time .time-box p {
+    font-family: "SVN-Gotham Bold", sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 0;
+    line-height: 1.3;
+    color: var(--color-text-secondary);
+}
+
+.time .time-box .time-hour {
+    font-size: 15px;
+}
+
+.time .time-sub {
+    font-family: "SVN-GothamLight Italic", sans-serif;
+    font-size: 8.7px;
+    font-weight: 200;
+    color: var(--color-text-secondary);
+    margin-top: 5%;
+}
+
+.time img {
+    width: 25px;
+    margin-top: 8%;
+}
+
+/* location */
+.location {
+    background-image: url("../images/white-backgroud-2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.location h2 {
+    font-family: "PinyonScript", sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    color: var(--color-primary);
+    padding-top: 6%;
+}
+
+.location .leaf-icon {
+    width: 25px;
+    padding-top: 45px;
+}
+
+.location .location-name {
+    font-family: "SVN-Gotham", sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    padding-top: 8%;
+}
+
+.location .location-address {
+    font-family: "SVN-Gotham Light Italic", sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.location .btn {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* padding: 10px 20px;            */
+    background-color: var(--color-button);
+    color: #e8dcc2ff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: "SVN-Gotham", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+    max-width: 328px;
+    width: 100%;
+    aspect-ratio: 328 / 28;
+}
+
+.location .img-frame {
+    border: 3px solid #fff;
+    /* độ dày & màu khung */
+    padding: 1%;
+    /* khoảng cách giữa ảnh và khung */
+    border-radius: 8px;
+    /* bo nhẹ các góc */
+}
+
+.location .logo {
+    padding-top: 10%;
+}
+
+.location .logo img {
+    max-width: 30px;
+    width: 100%;
+    height: auto;
+}
+
+.location .location-text {
+    font-family: "SVN-GothamLight", sans-serif;
+    font-size: 9.6px;
+    font-weight: normal;
+    color: #413115ff;
+    padding-top: 4%;
+    padding-bottom: 14%;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    line-height: 1.8;
+}
+
+/*========================= timeline ===========================*/
+.timeline {
+    background-image: url("../images/image146.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    aspect-ratio: 568 / 310;
+    color: #e7dbc2ff;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline h2 {
+    margin-bottom: 5%;
+    font-family: "PinyonScript", sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    padding-top: 12%;
+}
+
+.timeline .timeline-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 19%;
+}
+
+.timeline .timeline-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline .timeline-list .timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 31.5%;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.timeline .timeline-list .timeline-item:first-child::after {
+    left: 50%;
+}
+
+.timeline .timeline-list .timeline-item:last-child::after {
+    display: none;
+}
+
+.timeline .timeline-item .item {
+    min-height: 25px;
+}
+
+.timeline .timeline-list .timeline-item .hour {
+    font-family: "SVN-Gilroy Bold", sans-serif;
+    font-size: 11.3px;
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+.timeline .timeline-list .timeline-item .dot-icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.timeline .timeline-list .timeline-item .dot-icon-box .dot-icon {
+    width: 8.6px;
+    aspect-ratio: 1;
+    border-radius: 50px;
+    background-color: #e7dbc2ff;
+    position: relative;
+    top: -20%;
+}
+
+.timeline .timeline-list .timeline-item .image-icon {
+    width: 100%;
+    max-width: 30px;
+}
+
+.timeline .timeline-list .timeline-item .image-icon img {
+    height: auto;
+    max-width: 22px;
+    width: 100%;
+}
+
+.timeline .timeline-list .timeline-item .image-icon img.rings-icon {
+    max-width: 30px;
+}
+
+.timeline .timeline-list .timeline-item .title {
+    font-family: 'SVN-Gotham Light', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* ================= dresscode ======================= */
+.dresscode {
+    background-image: url("../images/white-backgroud-2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dresscode .dresscode-list {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding-top: 6%;
+    padding-bottom: 10%;
+    gap: 8%;
+}
+
+.dresscode .leaf-icon {
+    width: 25px;
+    padding-top: 11%;
+}
+
+.dresscode h2 {
+    font-family: "PinyonScript", sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    padding-top: 8%;
+    color: var(--color-primary);
+}
+
+.dresscode .dresscode-text {
+    font-family: "SVN-Gotham Light", sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    letter-spacing: 1.6px;
+    color: #49492cff;
+}
+
+.dresscode .dresscode-item .image-icon {
+    max-width: 52px;
+}
+
+.dresscode .dresscode-item .image-icon img {
+    width: 100%;
+}
+
+.dresscode .dresscode-item .icon-title {
+    font-family: "SVN-Gotham Bold", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+/* album =================>  */
+.album {
+    background-image: url("../images/white-backgroud-2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    height: auto;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 25px;
+    padding-bottom: 70px;
+}
+
+.splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* <====================== end album */
+
+/* ===================== RSVP ================================ */
+.rsvp {
+    background-image: url("../images/g396.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--color-text);
+    padding: 14% 5%;
+    width: 100%;
+}
+
+.rsvp .rsvp-container {
+    background-image: url("../images/white-backgroud-2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.rsvp .box-leaf-icon {
+    width: 100%;
+    padding-top: 6%;
+}
+
+.rsvp .box-leaf-icon img {
+    width: 44px;
+    height: auto;
+}
+
+.rsvp h2 {
+    font-family: "PinyonScript", sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    color: var(--color-text);
+    padding-top: 4%;
+}
+
+.rsvp .rsvp-text {
+    font-family: "SVN-Gotham Light", sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    color: var(--color-text);
+    padding: 4% 0;
+    letter-spacing: 1.28px;
+}
+
+.rsvp .rsvp-text strong {
+    font-family: "SVN-Gotham Bold", sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.rsvp .timeline-line {
+    border: none;
+    height: 2px;
+    background: var(--color-text);
+    padding: 1px 0;
+    width: 100%;
+}
+
+#rsvp-form {
+    width: 100%;
+    padding: 3% 0;
+}
+
+#rsvp-form .form-group.form-group-confirm {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding-bottom: 8%;
+}
+
+#rsvp-form input[type="radio"] {
+    display: none;
+    /* Hide the default radio button */
+}
+
+#rsvp-form .form-group .confirm-yes {
+    width: 40%;
+    /* height: 30px; */
+}
+
+#rsvp-form .form-group .confirm-no {
+    width: 55%;
+    /* height: 30px; */
+}
+
+#rsvp-form .radio-button {
+    font-family: "SVN-Gotham Book", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    display: inline-block;
+    padding: 1% 0;
+    border: 1px solid var(--color-text);
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    text-transform: uppercase;
+    user-select: none;
+    /* Prevent text selection on click */
+}
+
+#rsvp-form .form-group input[type="radio"]:checked+.radio-button {
+    background-color: var(--color-text);
+    /* Highlight selected button */
+    color: var(--color-timeline);
+    border-color: var(--color-text);
+}
+
+#rsvp-form .form-group input.input-text,
+#rsvp-form .form-group textarea.input-text {
+    font-family: "SVN-Gotham Book", sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    width: 100%;
+    padding: 1% 2%;
+    display: inline-block;
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    text-transform: uppercase;
+    user-select: none;
+    /* Prevent text selection on click */
+    margin-bottom: 2%;
+}
+
+#rsvp-form .form-group textarea.input-text {
+    font-family: "SVN-Gotham Book", sans-serif;
+    aspect-ratio: 10 / 2;
+    font-weight: normal;
+    border-radius: 15px;
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
+    padding: 2%;
+}
+
+#rsvp-form .form-actions button {
+    background-color: var(--color-button);
+    /* Green */
+    border: none;
+    color: var(--color-timeline);
+    padding: 2% 8%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+#rsvp-form .form-actions button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+/* ===================== extra-info ================================ */
+.extra-info {
+    background-image: url("../images/white-backgroud-2.webp");
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 4%;
+    padding-bottom: 12%;
+    /* letter-spacing: 0.04rem; */
+}
+
+.extra-info h2 {
+    font-family: "SVN-Gotham", sans-serif;
+    font-size: 26px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 11% 0;
+    letter-spacing: 2.4px;
+}
+
+.extra-info p.p-1 {
+    font-family: "SVN-Gotham ", sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    text-align: justify;
+    text-align-last: center;
+    padding-bottom: 5%;
+}
+
+.extra-info p.p-2,
+.extra-info p.p-3,
+.extra-info p.p-4 {
+    font-family: "SVN-Gotham Light", sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.extra-info p.p-3 {
+    padding-bottom: 10%;
+}
+
+.extra-info p.p-4 {
+    padding: 12%;
+}
+
+.extra-info .end-title {
+    font-family: "PinyonScript", sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    padding-bottom: 3%;
+}
+
+/* new handle accordion ====================> */
+.accordion-container {
+    width: 100%;
+    /* margin: 0 auto; */
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* overflow: hidden; */
+}
+
+.accordion-table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1.5px solid var(--color-text-secondary);
+    overflow: hidden;
+}
+
+.accordion-header {
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-text);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.accordion-header:hover {
+    opacity: 0.9;
+    color: var(--color-primary);
+}
+
+.accordion-header.active {
+    opacity: 0.9;
+    color: var(--color-primary);
+}
+
+.header-cell {
+    padding: 2% 3%;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+}
+
+.toggle-icon {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon.rotated {
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.header-text {
+    margin: 0 auto;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.accordion-content {
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-text-secondary);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.accordion-content.expanded {
+    max-height: 600px;
+}
+
+.content-cell {
+    padding: 1%;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+.content-text {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease 0.1s;
+}
+
+.accordion-content.expanded .content-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.accordion-item:last-child .accordion-content {
+    border-bottom: none;
+}
+
+.content-text ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accordion-conten ul li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.content-text ul li {
+    font-family: "SVN-Gotham Book", sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    display: inline-block;
+    padding: 0 1%;
+    cursor: pointer;
+    padding-bottom: .8%;
+    border-bottom: 1px solid var(--color-text-secondary);
+    margin-bottom: 3%;
+}
+
+/* slider */
+.location-slider {
+    padding-top: 64px;
+}
+
+.location-slider .splide__slide img {
+    width: 80%;
+    object-fit: cover;
+}
+
+/* class animation for heart */
+.heartbeat {
+    -webkit-animation: heartbeat 2s ease-in-out infinite both;
+    animation: heartbeat 2s ease-in-out infinite both;
+}
+
+/**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
+@-webkit-keyframes heartbeat {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes heartbeat {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+.shake-top {
+    -webkit-animation: shake-top 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+    animation: shake-top 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+}
+
+/**
+ * ----------------------------------------
+ * animation shake-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes shake-top {
+
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+    }
+
+    10% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+
+    20%,
+    40%,
+    60% {
+        -webkit-transform: rotate(-3deg);
+        transform: rotate(-3deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        -webkit-transform: rotate(3deg);
+        transform: rotate(3deg);
+    }
+
+    80% {
+        -webkit-transform: rotate(-2deg);
+        transform: rotate(-2deg);
+    }
+
+    90% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes shake-top {
+
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+    }
+
+    10% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+
+    20%,
+    40%,
+    60% {
+        -webkit-transform: rotate(-3deg);
+        transform: rotate(-3deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        -webkit-transform: rotate(3deg);
+        transform: rotate(3deg);
+    }
+
+    80% {
+        -webkit-transform: rotate(-2deg);
+        transform: rotate(-2deg);
+    }
+
+    90% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+}
+
+/* music */
+.player {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border: none;
+    outline: none;
+}
+
+.player img {
+    width: 100%;
+    height: auto;
+}
+
+.spin {
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
