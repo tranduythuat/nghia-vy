@@ -187,13 +187,34 @@ a {
     padding-bottom: 8%;
 }
 
-.cover .cover-inner .couple-img img {
-    max-width: 320px;
+.cover .cover-inner .cover-logo img {
+    max-width: 60px;
     width: 100%;
     height: auto;
 }
 
-.cover .cover-inner .cover-logo {}
+.cover .cover-inner .couple-img {
+    position: relative;
+    background-image: url('../images/couple-img.png');
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    aspect-ratio: 320 / 220;
+}
+
+.cover .cover-inner .couple-img .img-gif {
+    position: absolute;
+    max-width: 511px;
+    width: 100%;
+    height: auto;
+    top: -23%;
+    left: 8%;
+}
+
+.cover .cover-inner .text-ceremony {
+    margin-bottom: 10%;
+}
 
 .cover .cover-inner .cover-heart {
     max-width: 312px;
