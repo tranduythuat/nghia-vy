@@ -40,7 +40,7 @@ async function handleFormSubmit(e) {
   });
 
   const url =
-    "?sheet=sheet-1";
+    "https://script.google.com/macros/s/AKfycbxbINTWHkMMZUhcgZSkV_nsIgPY1GUpF3D_VZLkbr_nBkzj4nCWRpfh0kKuDEZiySNf/exec?sheet=confirm";
 
   try {
     const res = await fetch(url, {

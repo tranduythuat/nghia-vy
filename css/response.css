@@ -25,7 +25,7 @@
     }
 
     .cover .cover-inner .cover-names {
-        font-size: calc((27 / 568) * 100vw);
+        font-size: calc((32 / 568) * 100vw);
     }
 
     /* time */
@@ -82,7 +82,7 @@
     }
 
     .timeline .timeline-item .item {
-        min-height: calc((25 / 568) * 100vw);
+        min-height: calc((30 / 568) * 100vw);
     }
 
     .timeline .timeline-list .timeline-item .hour {
