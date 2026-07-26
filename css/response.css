@@ -145,6 +145,11 @@
         letter-spacing: calc((1.28 / 568) * 100vw);
     }
 
+    .rsvp .rsvp-text-en {
+        font-size: calc((12 / 568) * 100vw);
+        letter-spacing: calc((1.28 / 568) * 100vw);
+    }
+
     .rsvp .rsvp-text strong {
         font-size: calc((10 / 568) * 100vw);
     }

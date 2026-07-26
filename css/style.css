@@ -656,7 +656,13 @@ a {
     font-size: 10px;
     font-weight: normal;
     color: var(--color-text);
-    padding: 4% 0;
+    padding: 4% 0 0;
+    letter-spacing: 1.28px;
+}
+
+.rsvp .rsvp-text-en {
+    font-family: "SVN-Gotham Light", sans-serif;
+    font-size: 12px;
     letter-spacing: 1.28px;
 }
 
